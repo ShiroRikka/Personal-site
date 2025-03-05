@@ -62,7 +62,7 @@ const config: Config = {
     hasThemeToggle: true,
   },
   hero: {
-    background: import('src/assets/hero-bg.jpg'),
+    background: import('src/assets/hero-bg.png'),
     description: '本站正在施工中',
     title: import('@/custom/HeroLogo.astro'),
   },
@@ -73,7 +73,7 @@ const config: Config = {
         author: 'ShiroRikka',
         description: '爆裂吧,现实!粉碎吧,精神!Vanishment This World!',
         avatar: import('src/assets/avatar.webp'),
-        background: import('src/assets/profile-bg.jpg'),
+        background: import('src/assets/profile-bg.png'),
         socialIcons: [
           {
             label: 'github',
