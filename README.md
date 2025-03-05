@@ -1,4 +1,4 @@
-# 银河渡舟's Blog
+# ShiroRikka's Blog
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f603c52a-adbe-413d-a035-df609eb41392/deploy-status)](https://app.netlify.com/sites/wider/deploys)
@@ -9,7 +9,7 @@ This is the source code for my blog, which is built with [Astro](https://astro.b
 
 ![Theme Preview](https://github.com/izmttk/astro-mecure/assets/26360968/4c79fba0-390d-48f6-a887-bcbc39c5e462)
 
-- 银河渡舟的小站: <https://suborbit.net>
+- ShiroRikka的小窝: <[(https://shirorikka.netlify.app/)]>
 
 ## Features
 
