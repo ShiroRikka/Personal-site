@@ -72,7 +72,7 @@ const config: Config = {
         name: 'profile',
         author: 'ShiroRikka',
         description: '爆裂吧,现实!粉碎吧,精神!Vanishment This World!',
-        avatar: import('src/assets/avatar.png'),
+        avatar: import('src/assets/avatar.webp'),
         background: import('src/assets/profile-bg.jpg'),
         socialIcons: [
           {

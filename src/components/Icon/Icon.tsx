@@ -4,7 +4,7 @@ import { Icon as Iconify, type IconProps as IconifyProps } from '@iconify/react'
 
 
 
-// import avatarImg from '@/assets/avatar.png';
+// import avatarImg from '@/assets/avatar.webp';
 // import profileBg from '@/assets/profile-bg.webp'
 // import IconBrandGithub from '~icons/tabler/brand-github'
 // import IconBrandBilibili from '~icons/tabler/brand-bilibili'
