@@ -183,7 +183,7 @@ const config: Config = {
       { label: 'Github', url: 'https://github.com/izmttk'},
     ],
     declarations: [
-      `Copyright © ${getYear(new Date())} 银河渡舟 All Rights Reserved.`,
+      `Copyright © ${getYear(new Date())} ShiroRikka All Rights Reserved.`,
     ],
     generator: true,
     rss: true,
