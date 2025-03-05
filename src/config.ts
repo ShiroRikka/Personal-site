@@ -79,31 +79,31 @@ const config: Config = {
             label: 'github',
             color: '#7c8690',
             icon: 'tabler:brand-github',
-            url: 'https://github.com/izmttk'
+            url: 'https://github.com/ShiroRikka'
           },
           {
             label: 'bilibili',
             color: '#fc87b2',
             icon: 'tabler:brand-bilibili',
-            url: 'https://space.bilibili.com/293591084'
+            url: 'https://space.bilibili.com/353878334'
           },
           {
             label: 'netease music',
             color: '#ff4e6a',
             icon: 'tabler:brand-netease-music',
-            url: 'https://music.163.com/user/390631653'
+            url: 'https://music.163.com/user/622616570'
           },
           {
             label: 'twitter',
             color: '#1d9bf0',
             icon: 'tabler:brand-twitter',
-            url: 'https://twitter.com/vviderx'
+            url: 'https://x.com/ShiroRikka0'
           },
           {
             label: 'mail',
             color: '#7562c7',
             icon: 'tabler:mail',
-            url: 'mailto:widergao@gmail.com'
+            url: 'shirorikka0@gmail.com'
           }
         ],
       },

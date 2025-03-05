@@ -28,7 +28,7 @@ This is the source code for my blog, which is built with [Astro](https://astro.b
 ### 1. Clone the repo
 
 ```bash
-git clone https://https://github.com/izmttk/astro-mecure.git
+git clone https://github.com/ShiroRikka/Personal-site.git
 cd astro-mecure
 ```
 
