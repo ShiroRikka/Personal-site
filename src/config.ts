@@ -62,7 +62,7 @@ const config: Config = {
     hasThemeToggle: true,
   },
   hero: {
-    background: import('src/assets/hero-bg.png'),
+    background: import('src/assets/hero-bg.webp'),
     description: '本站正在施工中',
     title: import('@/custom/HeroLogo.astro'),
   },
@@ -73,7 +73,7 @@ const config: Config = {
         author: 'ShiroRikka',
         description: '爆裂吧,现实!粉碎吧,精神!Vanishment This World!',
         avatar: import('src/assets/avatar.webp'),
-        background: import('src/assets/profile-bg.png'),
+        background: import('src/assets/profile-bg.webp'),
         socialIcons: [
           {
             label: 'github',
@@ -145,7 +145,7 @@ const config: Config = {
   comment: {
     provider: 'giscus',
     options: {
-      repo: 'izmttk/izmttk.github.io',
+      repo: 'shirorikka/shirorikka.github.io',
       repoId: 'R_kgDOJIxtIQ',
       category: 'General',
       categoryId: 'DIC_kwDOJIxtIc4CU1cl',
@@ -180,7 +180,7 @@ const config: Config = {
       { label: '关于', url: url('about')},
       { label: '归档', url: url('archive')},
       { label: '友情链接', url: url('friends')},
-      { label: 'Github', url: 'https://github.com/izmttk'},
+      { label: 'Github', url: 'https://github.com/shirorikka'},
     ],
     declarations: [
       `Copyright © ${getYear(new Date())} ShiroRikka All Rights Reserved.`,
