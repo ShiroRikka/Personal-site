@@ -5,10 +5,6 @@
 
 This is the source code for my blog, which is built with [Astro](https://astro.build), and deployed to [Netlify](https://netlify.com).
 
-## Preview
-
-![Theme Preview](https://github.com/izmttk/astro-mecure/assets/26360968/4c79fba0-390d-48f6-a887-bcbc39c5e462)
-
 - ShiroRikka的小窝: <[(https://shirorikka.netlify.app/)]>
 
 ## Features
