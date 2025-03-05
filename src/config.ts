@@ -3,7 +3,7 @@ import { getYear } from 'date-fns';
 import { url } from '@/utils/url';
 
 const config: Config = {
-  title: 'ShiroRikka',
+  title: 'ShiroRikkaの小窝',
   description: '爆裂吧,现实!粉碎吧,精神!Vanishment This World!',
   author: 'Wider',
   favicon: url('favicon.ico'),
