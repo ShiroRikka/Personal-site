@@ -78,7 +78,7 @@ const config: Config = {
             label: 'github',
             color: '#7c8690',
             icon: 'tabler:brand-github',
-            url: 'https://github.com/ShiroRikka'
+            url: 'https://www.bilibili.com/video/BV1GJ411x7h7/'
           },
           {
             label: 'bilibili',
@@ -179,7 +179,7 @@ const config: Config = {
       { label: '关于', url: url('about')},
       { label: '归档', url: url('archive')},
       { label: '友情链接', url: url('friends')},
-      { label: 'Github', url: 'https://github.com/shirorikka'},
+      { label: 'Github', url: 'https://www.bilibili.com/video/BV1GJ411x7h7/'},
     ],
     declarations: [
       `Copyright © ${getYear(new Date())} ShiroRikka All Rights Reserved.`,
