@@ -8,7 +8,7 @@ const config: Config = {
   author: 'Wider',
   favicon: url('favicon.ico'),
   navbar: {
-    logo: import('@/custom/NavLogo.astro'),
+    
     menu: [
       {
         label: '首页',
@@ -64,7 +64,6 @@ const config: Config = {
   hero: {
     background: import('src/assets/hero-bg.webp'),
     description: '本站正在施工中',
-    title: import('@/custom/HeroLogo.astro'),
   },
   sidebar: {
     widgets: [
