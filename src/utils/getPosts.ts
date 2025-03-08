@@ -42,12 +42,8 @@ function postUrl(slug: string) {
   return url('posts', slug);
 }
 
-let cache: Post[] | null = null;
 
 async function getPosts(): Promise<Post[]> {
-  if (cache !== null) {
-    return cache;
-  }
   const posts = await getCollection(collection);
 
   const tagsBucket = countTags(posts);
