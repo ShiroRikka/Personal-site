@@ -18,26 +18,17 @@ class Cache<T> {
   }
 }
 
+// 使用内存缓存和持久化缓存结合的策略
+const memoryHashCache = new Map<string, Uint8Array>();
 const hashCache = new Cache(hashLoader);
 
 async function hashLoader(imagePath: string) {
-  // const maxSize = 100;
-  // const image = await loadImage(imagePath);
-  // const width = image.width;
-  // const height = image.height;
-
-  // const scale = Math.min(maxSize / width, maxSize / height);
-  // const resizedWidth = Math.floor(width * scale);
-  // const resizedHeight = Math.floor(height * scale);
-
-  // const canvas = createCanvas(resizedWidth, resizedHeight);
-  // const ctx = canvas.getContext('2d');
-  // ctx.drawImage(image, 0, 0, resizedWidth, resizedHeight);
-
-  // const imageData = ctx.getImageData(0, 0, resizedWidth, resizedHeight);
-  // const rgba = new Uint8Array(imageData.data.buffer);
+  // 检查内存缓存
+  if (memoryHashCache.has(imagePath)) {
+    return memoryHashCache.get(imagePath)!;
+  }
     
-  const maxSize = 100;
+  const maxSize = 100; // 使用较小的尺寸以加快处理速度
   const image = await sharp(imagePath);
   const {
     data: resizedImageData, 
@@ -49,6 +40,10 @@ async function hashLoader(imagePath: string) {
     .toBuffer({ resolveWithObject: true });
   const {width: resizedWidth, height: resizedHeight} = resizedInfo;
   const hash = rgbaToThumbHash(resizedWidth, resizedHeight, resizedImageData);
+  
+  // 存入内存缓存
+  memoryHashCache.set(imagePath, hash);
+  
   return hash;
 }
 

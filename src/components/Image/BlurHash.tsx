@@ -19,9 +19,16 @@ function base64ToBinary(codes: string) {
     : new Uint8Array(Buffer.from(codes, 'base64'));
 }
 
+// 使用缓存避免重复计算相同的hash
+const hashCache = new Map<string, string>();
 function hashToDataURL(hash: string) {
+  if (hashCache.has(hash)) {
+    return hashCache.get(hash);
+  }
   const binary = base64ToBinary(hash);
-  return thumbHashToDataURL(binary);
+  const dataURL = thumbHashToDataURL(binary);
+  hashCache.set(hash, dataURL);
+  return dataURL;
 }
 
 function BlurHash({
