@@ -63,7 +63,7 @@ const config: Config = {
   },
   hero: {
     background: import('src/assets/hero-bg.webp'),
-    description: '本站当前正处于快速迭代期，Alpha站点：https://shirorikka-Alpha.netlify.app/，无法访问是正常的QwQ',
+    description: '本站当前正处于快速迭代期,Alpha站点:https://shirorikka-Alpha.netlify.app/,无法访问是正常的QwQ',
   },
   sidebar: {
     widgets: [
@@ -141,10 +141,7 @@ const config: Config = {
       infoText: '转载或引用本文时请注明作者及出处，不得用于商业用途。',
     }
   },
-  comment: {
-    provider: null,
-    options: {},
-  },
+  comment: false,
   footer: {
     links: [
       { label: '更新日志', url: url('changelog')},
