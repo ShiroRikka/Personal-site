@@ -142,35 +142,8 @@ const config: Config = {
     }
   },
   comment: {
-    provider: 'giscus',
-    options: {
-      repo: 'shirorikka/shirorikka.github.io',
-      repoId: 'R_kgDOJIxtIQ',
-      category: 'General',
-      categoryId: 'DIC_kwDOJIxtIc4CU1cl',
-      mapping: 'pathname',
-      reactionsEnabled: '1',
-      emitMetadata: '0',
-      inputPosition: 'top',
-      lang: 'zh-CN',
-    },
-    // provider: 'waline',
-    // options: {
-    //   serverURL: 'https://waline-vercel.wider.ink/',
-    //   meta: ['nick', 'mail', 'link'],
-    //   requiredMeta: ['nick', 'mail'],
-    //   wordLimit: 200,
-    //   commentSorting: 'latest',
-    //   login: 'disable',
-    //   search: false,
-    //   copyright: false,
-    //   reaction: false,
-    //   emoji: [
-    //     '//unpkg.com/@waline/emojis@1.1.0/weibo',
-    //     '//unpkg.com/@waline/emojis@1.1.0/bilibili',
-    //     // '//cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Coolapk/',
-    //   ],
-    // }
+    provider: null,
+    options: {},
   },
   footer: {
     links: [
