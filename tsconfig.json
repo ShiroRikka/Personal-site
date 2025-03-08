@@ -4,12 +4,12 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "types": [
-      "unplugin-icons/types/react",
+      "unplugin-icons/types/react"
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-    },
+      "@/*": ["src/*"]
+    }
     // "plugins": [
     //   {
     //     "name": "@astrojs/ts-plugin"
