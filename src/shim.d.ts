@@ -1,4 +1,8 @@
 // typescript compatibility for vite-plugin-svgr with exportAsDefault:true
+declare module 'astro:transitions' {
+  import type { Component } from 'astro';
+  export const ViewTransitions: Component;
+}
 declare module '*.svg' {
   import * as React from 'react'
 
@@ -15,5 +19,4 @@ declare module 'astro:assets' {
 // support importing .astro in .ts file
 declare module '*.astro' {
   import { AstroComponentFactory } from 'astro/runtime/server/index.js';
-  export default AstroComponentFactory;
-}
+  export default AstroComponentFactory;}

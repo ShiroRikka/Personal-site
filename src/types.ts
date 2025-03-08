@@ -106,6 +106,7 @@ import type { CategoryTreeConfig, ComponentConfig, ProfileConfig, SidebarConfig 
 import type { PaginationConfig as PaginationPartialConfig } from './partials/Pagination';
 import type { CommentConfig as CommentPartialConfig } from './partials/Comment';
 import type { FooterConfig as FooterPartialConfig } from './partials/Footer';
+import type { WalineOptions } from './partials/Comment/Waline';
 
 
 interface Sortable {
@@ -132,7 +133,10 @@ export type SidebarConfig = Omit<SidebarPartialConfig, 'widgets'> & {
 export type PaginationConfig = PaginationPartialConfig & {
   pageSize?: number;
 }
-export type CommentConfig = CommentPartialConfig;
+export type CommentConfig = CommentPartialConfig | {
+  provider?: "waline" | null;
+  options?: WalineOptions | {};
+};
 export type FooterConfig = FooterPartialConfig;
 
 export type ArticleConfig = {
