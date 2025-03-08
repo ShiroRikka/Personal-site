@@ -16,49 +16,67 @@ const useWindowScrollInfo = () => {
     y: number;
   } | null>(null);
   useEffect(() => {
+    // 添加节流变量
+    let ticking = false;
+    let lastScrollTime = 0;
+    const throttleTime = 100; // 100ms的节流时间
+    
     const handler = () => {
-      const { scrollX, scrollY } = window;
-      if (scrollY === 0) {
-        setIsTop(true);
-      } else {
-        setIsTop(false);
-      }
-      if (prev.current === null) {
-        prev.current = {
-          x: scrollX,
-          y: scrollY
-        }
-      } else {
-        const direction: State = {
-          horizontal: 'unchanged',
-          vertical: 'unchanged',
-        };
-        if (scrollX > prev.current.x) {
-          direction.horizontal = 'left';
-          prev.current.x = scrollY;
-        } else if (scrollX < prev.current.x) {
-          direction.horizontal = 'right';
-          prev.current.x = scrollX;
+      const now = Date.now();
+      // 如果距离上次执行的时间小于节流时间，则不执行
+      if (now - lastScrollTime < throttleTime) return;
+      
+      lastScrollTime = now;
+      if (ticking) return;
+      
+      ticking = true;
+      
+      // 使用requestAnimationFrame来优化性能
+      requestAnimationFrame(() => {
+        const { scrollX, scrollY } = window;
+        if (scrollY === 0) {
+          setIsTop(true);
         } else {
-          direction.horizontal = 'unchanged';
+          setIsTop(false);
         }
-        if (scrollY > prev.current.y) {
-          direction.vertical = 'down';
-          prev.current.y = scrollY;
-        } else if (scrollY < prev.current.y) {
-          direction.vertical = 'up';
-          prev.current.y = scrollY;
-        } else {
-          direction.vertical = 'unchanged';
-        }
-        setScrollDirection(state => {
-          if (state.horizontal === direction.horizontal && state.vertical === direction.vertical) {
-            return state;
-          } else {
-            return direction;
+        if (prev.current === null) {
+          prev.current = {
+            x: scrollX,
+            y: scrollY
           }
-        });
-      }
+        } else {
+          const direction: State = {
+            horizontal: 'unchanged',
+            vertical: 'unchanged',
+          };
+          if (scrollX > prev.current.x) {
+            direction.horizontal = 'left';
+            prev.current.x = scrollX; // 修复了之前的bug，应该是scrollX而不是scrollY
+          } else if (scrollX < prev.current.x) {
+            direction.horizontal = 'right';
+            prev.current.x = scrollX;
+          } else {
+            direction.horizontal = 'unchanged';
+          }
+          if (scrollY > prev.current.y) {
+            direction.vertical = 'down';
+            prev.current.y = scrollY;
+          } else if (scrollY < prev.current.y) {
+            direction.vertical = 'up';
+            prev.current.y = scrollY;
+          } else {
+            direction.vertical = 'unchanged';
+          }
+          setScrollDirection(state => {
+            if (state.horizontal === direction.horizontal && state.vertical === direction.vertical) {
+              return state;
+            } else {
+              return direction;
+            }
+          });
+        }
+        ticking = false;
+      });
     };
 
     //We have to update window scroll at mount, before subscription.

@@ -8,16 +8,20 @@ export default function ProgressBar() {
 
   useEffect(() => {
     let id: NodeJS.Timeout | null = null;
+    let lastUpdate = Date.now();
     function start() {
       ref.current?.reset();
       if (id) {
         clearInterval(id);
       }
       id = setInterval(() => {
+        const now = Date.now();
+        if (now - lastUpdate < 300) return;
         if (ref.current && ref.current?.get() < 90) {
-          ref.current?.add(10);
+          ref.current?.add(5);
+          lastUpdate = now;
         }
-      }, 500)
+      }, 200)
     }
     function finish() {
       if (id) {

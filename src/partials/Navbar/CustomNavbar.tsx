@@ -18,14 +18,14 @@ import {
   navbarVisible as navbarVisibleAtom,
   sidebarDrawerVisible as sidebarDrawerVisibleAtom,
   hasThemeToggle as hasThemeToggleAtom,
-  hasSearchToggle as hasSearchToggleAtom,
+
 } from '@/store/atoms';
 import Icon from '@/components/Icon';
 import { useAtom, useSetAtom } from 'jotai';
 import { twMerge } from 'tailwind-merge';
 import ScrollArea from '@/components/ScrollArea';
 import useElementSize from '@/hooks/useElementSize';
-import SearchToggle from '@/components/SearchToggle';
+
 import styles from './Navbar.module.css';
 import { url } from '@/utils/url';
 
@@ -72,19 +72,17 @@ export default function CustomNavbar({
   containerClassName,
   menu = [],
   hasThemeToggle = true,
-  hasSearchToggle = true,
+
   logo,
   ...rest
 }: CustomNavbarProps) {
   const [map, {set, setAll}] = useMap<{[key: string]: boolean}>({});
 
   const [show, setShow] = useAtom(navbarVisibleAtom);
-  const setHasSearchToggle = useSetAtom(hasSearchToggleAtom);
+
   const setHasThemeToggle = useSetAtom(hasThemeToggleAtom);
   const setNavbarSize = useSetAtom(navbarSizeAtom);
-  useEffect(() => {
-    setHasSearchToggle(hasSearchToggle);
-  }, [hasSearchToggle]);
+
   useEffect(() => {
     setHasThemeToggle(hasThemeToggle);
   }, [hasThemeToggle]);
@@ -185,7 +183,7 @@ export default function CustomNavbar({
           </Navbar.Content>
         )}
         <Navbar.Content className='md:ml-3 space-x-2'>
-          {hasSearchToggle && isMd && <SearchToggle />}
+
           {hasThemeToggle && isMd && <ThemeToggle open={map['theme'] ?? false} onOpenChange={onThemeMenuOpenChange} />}
           {!isMd && <SideToggle />}
         </Navbar.Content>

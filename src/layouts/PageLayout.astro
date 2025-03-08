@@ -16,7 +16,7 @@ import config from '@/config';
 import sortByProperty from '@/utils/sortByProperty';
 import { twMerge } from 'tailwind-merge';
 import generateToc from '@/utils/generateToc';
-import Search from '@/components/Search';
+
 
 export interface Props {
   page: Page;
@@ -170,5 +170,5 @@ const sidebarConfig: SidebarConfig | false = sidebar ? {
   )}
   <Fabs class='hidden md:block right-[max(1rem,calc(50%-3rem-74rem/2))]' />
   {hasFooter && footer && <Footer containerClassName="px-3 mx-auto lg:max-w-[74rem] my-8" config={footer} />}
-  {algolia && <Search {...algolia} client:only='react' />}
+
 </Html>
