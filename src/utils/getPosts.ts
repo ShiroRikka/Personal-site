@@ -49,6 +49,7 @@ async function getPosts(): Promise<Post[]> {
   const tagsBucket = countTags(posts);
   const categoriesBucket = countCategories(posts);
   
+  let cache;
   cache = await Promise.all(posts.map(async post => {
     const { Content, headings, remarkPluginFrontmatter } = await post.render();
     const author = (await getEntry(post.data.author)).data ?? {name: config.author};
