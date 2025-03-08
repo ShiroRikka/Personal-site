@@ -58,7 +58,7 @@ const config: Config = {
       //   ]
       // },
     ],
-    hasSearchToggle: true,
+    hasSearchToggle: false,
     hasThemeToggle: true,
   },
   hero: {
