@@ -63,7 +63,7 @@ const config: Config = {
   },
   hero: {
     background: import('src/assets/hero-bg.webp'),
-    description: '本站当前正处于快速迭代期,Alpha站点:https://shirorikka-Alpha.netlify.app/,无法访问是正常的QwQ',
+    description: '本站当前正处于快速迭代期,Alpha站点:https://shirorikka-alpha.netlify.app/,无法访问是正常的QwQ',
   },
   sidebar: {
     widgets: [
