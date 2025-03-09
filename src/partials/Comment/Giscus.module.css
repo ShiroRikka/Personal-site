@@ -4,9 +4,9 @@
   --giscus-text: theme(colors.gray.700);
   --giscus-text-secondary: theme(colors.gray.500);
   --giscus-border: theme(colors.gray.200);
-  --giscus-bg: theme(colors.white);
-  --giscus-bg-secondary: theme(colors.gray.100);
-  --giscus-bg-hover: theme(colors.gray.200);
+  --giscus-bg: transparent;
+  --giscus-bg-secondary: transparent;
+  --giscus-bg-hover: rgb(229 231 235 / 20%);
   --giscus-radius: 0.75rem;
 }
 
@@ -14,9 +14,9 @@
   --giscus-text: theme(colors.gray.300);
   --giscus-text-secondary: theme(colors.gray.400);
   --giscus-border: theme(colors.gray.700);
-  --giscus-bg: theme(colors.gray.800);
-  --giscus-bg-secondary: theme(colors.gray.700);
-  --giscus-bg-hover: theme(colors.gray.600);
+  --giscus-bg: transparent;
+  --giscus-bg-secondary: transparent;
+  --giscus-bg-hover: rgb(75 85 99 / 20%);
 }
 
 .giscus :global(.gsc-main) {
