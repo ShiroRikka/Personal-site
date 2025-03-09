@@ -15,3 +15,4 @@ export interface ProfileProps {
 
 export { default } from './Profile.astro';
 export * from './Profile.astro';
+export { default as ProfileReact } from './ProfileReact.tsx';

@@ -19,7 +19,7 @@ const useWindowScrollInfo = () => {
     // 添加节流变量
     let ticking = false;
     let lastScrollTime = 0;
-    const throttleTime = 100; // 100ms的节流时间
+    const throttleTime = 50; // 减少节流时间，提高响应速度
     
     const handler = () => {
       const now = Date.now();
@@ -51,7 +51,7 @@ const useWindowScrollInfo = () => {
           };
           if (scrollX > prev.current.x) {
             direction.horizontal = 'left';
-            prev.current.x = scrollX; // 修复了之前的bug，应该是scrollX而不是scrollY
+            prev.current.x = scrollX;
           } else if (scrollX < prev.current.x) {
             direction.horizontal = 'right';
             prev.current.x = scrollX;
@@ -67,13 +67,8 @@ const useWindowScrollInfo = () => {
           } else {
             direction.vertical = 'unchanged';
           }
-          setScrollDirection(state => {
-            if (state.horizontal === direction.horizontal && state.vertical === direction.vertical) {
-              return state;
-            } else {
-              return direction;
-            }
-          });
+          // 立即更新滚动方向状态，避免状态更新延迟
+          setScrollDirection(direction);
         }
         ticking = false;
       });
