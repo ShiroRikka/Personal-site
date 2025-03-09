@@ -1,13 +1,13 @@
 ---
-import Waline from './Waline';
-import type { WalineOptions } from './Waline';
+import Giscus from './Giscus';
+import type { GiscusConfig } from './Giscus';
 
-export interface WalineCommentConfig {
-  provider: 'waline';
-  options: WalineOptions;
+export interface GiscusCommentConfig {
+  provider: 'giscus';
+  options: GiscusConfig;
 }
 
-export type CommentConfig = WalineCommentConfig | false;
+export type CommentConfig = GiscusCommentConfig | false;
 
 export interface CommentProps {
   config: CommentConfig;
@@ -20,6 +20,6 @@ const {
 ---
 {config && (
   <>
-    {config.provider === 'waline' && <Waline {...config.options} client:only="react" />}
+    {config.provider === 'giscus' && <Giscus {...config.options} client:only="react" />}
   </>
 )}
