@@ -1,9 +1,9 @@
 .giscus {
   --giscus-primary: theme(colors.primary.500);
   --giscus-primary-hover: theme(colors.primary.400);
-  --giscus-text: theme(colors.gray.700);
-  --giscus-text-secondary: theme(colors.gray.500);
-  --giscus-border: theme(colors.gray.200);
+  --giscus-text: theme(colors.gray.900);
+  --giscus-text-secondary: theme(colors.gray.700);
+  --giscus-border: theme(colors.gray.300);
   --giscus-bg: transparent;
   --giscus-bg-secondary: transparent;
   --giscus-bg-hover: rgb(229 231 235 / 20%);
@@ -14,9 +14,9 @@
 }
 
 :global(.dark) .giscus {
-  --giscus-text: theme(colors.gray.300);
-  --giscus-text-secondary: theme(colors.gray.400);
-  --giscus-border: theme(colors.gray.700);
+  --giscus-text: theme(colors.gray.100);
+  --giscus-text-secondary: theme(colors.gray.200);
+  --giscus-border: theme(colors.gray.500);
   --giscus-bg: transparent;
   --giscus-bg-secondary: transparent;
   --giscus-bg-hover: rgb(75 85 99 / 20%);
