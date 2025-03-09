@@ -71,6 +71,7 @@ export default function Footer({
           <a href="https://count.getloli.com/@shirorikka" target="_blank" className='whitespace-nowrap'>
             <img src="https://count.getloli.com/@shirorikka?name=shirorikka&theme=asoul&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="网站访问计数器" className="inline-block" />
           </a>
+          <a href="https://icp.gov.moe/?keyword=20251190" target="_blank" className='whitespace-nowrap'>萌ICP备20251190号</a>
         </div>
       </div>
     </footer>

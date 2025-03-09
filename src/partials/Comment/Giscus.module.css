@@ -4,25 +4,28 @@
   --giscus-text: theme(colors.gray.900);
   --giscus-text-secondary: theme(colors.gray.700);
   --giscus-border: theme(colors.gray.300);
-  --giscus-bg: transparent;
-  --giscus-bg-secondary: transparent;
-  --giscus-bg-hover: rgb(229 231 235 / 20%);
+  --giscus-bg: rgb(255 255 255 / 60%);
+  --giscus-bg-secondary: rgb(255 255 255 / 40%);
+  --giscus-bg-hover: rgb(229 231 235 / 40%);
   --giscus-radius: 0.75rem;
   --giscus-gap: 1rem;
   --giscus-social-reaction-bg-hover: #eaeef2;
   --giscus-social-reaction-bg-reacted-hover: rgb(36 99 235 / 20%);
+  --giscus-backdrop-blur: 10px;
+  --giscus-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
 }
 
 :global(.dark) .giscus {
   --giscus-text: theme(colors.gray.100);
   --giscus-text-secondary: theme(colors.gray.200);
   --giscus-border: theme(colors.gray.500);
-  --giscus-bg: transparent;
-  --giscus-bg-secondary: transparent;
-  --giscus-bg-hover: rgb(75 85 99 / 20%);
+  --giscus-bg: rgb(31 41 55 / 60%);
+  --giscus-bg-secondary: rgb(31 41 55 / 40%);
+  --giscus-bg-hover: rgb(75 85 99 / 40%);
   --giscus-gap: 1rem;
   --giscus-social-reaction-bg-hover: #373e47;
   --giscus-social-reaction-bg-reacted-hover: #143d79;
+  --giscus-shadow: 0 4px 6px -1px rgb(0 0 0 / 20%), 0 2px 4px -2px rgb(0 0 0 / 20%);
 }
 
 .giscus :global(.gsc-main) {
@@ -44,6 +47,9 @@
   border-color: var(--giscus-border);
   background-color: var(--giscus-bg);
   border-width: 1px;
+  backdrop-filter: blur(var(--giscus-backdrop-blur));
+  -webkit-backdrop-filter: blur(var(--giscus-backdrop-blur));
+  box-shadow: var(--giscus-shadow);
 }
 
 .giscus :global(.gsc-comment) {
@@ -61,6 +67,8 @@
   background-color: var(--giscus-bg-secondary);
   border-top-left-radius: var(--giscus-radius);
   border-top-right-radius: var(--giscus-radius);
+  backdrop-filter: blur(var(--giscus-backdrop-blur));
+  -webkit-backdrop-filter: blur(var(--giscus-backdrop-blur));
 }
 
 .giscus :global(.gsc-comment-content) {
@@ -112,6 +120,8 @@
   color: var(--giscus-text-secondary);
   background-color: var(--giscus-bg-secondary);
   transition: all 0.2s ease;
+  backdrop-filter: blur(var(--giscus-backdrop-blur));
+  -webkit-backdrop-filter: blur(var(--giscus-backdrop-blur));
 }
 
 .giscus :global(.gsc-reactions-button:hover) {
