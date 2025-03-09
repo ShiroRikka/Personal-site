@@ -54,6 +54,10 @@ main {
   --color-btn-primary-disabled-bg: #1e3a8a;
   --color-btn-primary-disabled-border: transparent;
   
+  --color-action-list-item-default-hover-bg: rgb(144 157 171 / 12%);
+  --color-segmented-control-bg: rgb(56 66 82 / 50%);
+  --color-segmented-control-button-bg: #374151;
+  --color-segmented-control-button-selected-border: transparent;
   --color-fg-default: #d1d5db;
   --color-fg-muted: #9ca3af;
   --color-fg-subtle: #4b5563;
@@ -70,21 +74,32 @@ main {
   --color-accent-emphasis: #2563eb;
   --color-accent-muted: rgb(36 99 235 / 40%);
   --color-accent-subtle: rgb(36 99 235 / 10%);
+  --color-success-fg: #57ab5a;
+  --color-attention-fg: #c69026;
+  --color-attention-muted: rgb(174 124 20 / 40%);
+  --color-attention-subtle: rgb(174 124 20 / 15%);
+  --color-danger-fg: #e5534b;
+  --color-danger-muted: rgb(229 83 75 / 40%);
+  --color-danger-subtle: rgb(229 83 75 / 10%);
+  --color-primer-shadow-inset: 0 0 transparent;
+  --color-scale-gray-7: #373e47;
+  --color-scale-blue-8: #143d79;
+
+  /*! Extensions from @primer/css/alerts/flash.scss */
+  --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
 }
 
 main .gsc-main {
   gap: 1rem;
 }
-
 main .gsc-comment-box {
   border-radius: 0.75rem!important;
 }
-
 main .gsc-comment-box-tabs {
   border-start-end-radius: 0.75rem;
   border-start-start-radius: 0.75rem;
 }
-
 main .gsc-comment-box-tabs button {
   border-radius: 0.5rem 0.5rem 0 0;
   border-start-end-radius: 0.5rem!important;
@@ -94,41 +109,33 @@ main .gsc-comment-box-tabs button {
   padding-inline-end: 0.65rem!important;
   padding-inline-start: 0.65rem!important;
 }
-
 main .gsc-comment .gsc-comment-box-tabs {
   border-radius: 0.75rem 0.75rem 0 0;
 }
-
-main .gsc-comment > div {
+main .gsc-comment > div{
   background: none;
   border: none;
   display: flex;
   flex-direction: column;
 }
-
 main .gsc-timeline {
   gap: 0.5rem;
 }
-
 main .gsc-timeline > * + * {
   border-top: 1px solid #374151;
   padding-top: 0.5rem;
 }
-
 main .gsc-comment-header {
   padding-inline-end: 0;
   padding-inline-start: 0;
 }
-
 main .gsc-reply-box {
   background: none;
   border: none;
 }
-
 main .pagination-loader-container {
   background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
 }
-
 main .gsc-loading-image {
   background-image: url("https://github.githubassets.com/images/mona-loading-dimmed.gif");
 }

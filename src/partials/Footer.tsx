@@ -68,6 +68,7 @@ export default function Footer({
           {generator && <span>Powered By <a href='https://astro.build/' target='_blank'><AstroLogo className='inline' />Astro</a> · Designed By ShiroRikka.</span>}
           {rss && <a href={url('rss/feed.xml')} target='_blank' className='whitespace-nowrap'><IconRss className='inline align-[-3px] mr-1' />RSS订阅</a>}
           {sitemap && <a href={url('sitemap-index.xml')} target='_blank' className='whitespace-nowrap'><IconSitemap className='inline align-[-3px] mr-1' />站点地图</a>}
+          <a href="https://icp.gov.moe/?keyword=20251190" target="_blank" className='whitespace-nowrap'>萌ICP备20251190号</a>
           <a href="https://count.getloli.com/@shirorikka" target="_blank" className='whitespace-nowrap'>
             <img src="https://count.getloli.com/@shirorikka?name=shirorikka&theme=asoul&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" alt="网站访问计数器" className="inline-block" />
           </a>

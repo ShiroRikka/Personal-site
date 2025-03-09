@@ -144,10 +144,10 @@ const config: Config = {
   comment: {
     provider: 'giscus',
     options: {
-      repo: 'ShiroRikka/ShiroRikka.github.io',
-      repoId: 'R_kgDOLBWqpw',
+      repo: 'ShiroRikka/Personal-site',
+      repoId: 'R_kgDOODe-lg',
       category: 'Announcements',
-      categoryId: 'DIC_kwDOLBWqp84CcQXE',
+      categoryId: 'DIC_kwDOODe-ls4CnvLQ',
       mapping: 'pathname',
       reactionsEnabled: '1',
       emitMetadata: '0',
