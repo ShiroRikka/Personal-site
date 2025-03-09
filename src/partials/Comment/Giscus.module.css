@@ -9,6 +9,8 @@
   --giscus-bg-hover: rgb(229 231 235 / 20%);
   --giscus-radius: 0.75rem;
   --giscus-gap: 1rem;
+  --giscus-social-reaction-bg-hover: #eaeef2;
+  --giscus-social-reaction-bg-reacted-hover: rgb(36 99 235 / 20%);
 }
 
 :global(.dark) .giscus {
@@ -19,6 +21,8 @@
   --giscus-bg-secondary: transparent;
   --giscus-bg-hover: rgb(75 85 99 / 20%);
   --giscus-gap: 1rem;
+  --giscus-social-reaction-bg-hover: #373e47;
+  --giscus-social-reaction-bg-reacted-hover: #143d79;
 }
 
 .giscus :global(.gsc-main) {
@@ -84,9 +88,12 @@
 
 .giscus :global(.gsc-comment-box-tabs button) {
   border-radius: 0.5rem 0.5rem 0 0;
-  border-start-end-radius: 0.5rem;
-  border-start-start-radius: 0.5rem;
-  padding: 0.35rem 0.65rem;
+  border-start-end-radius: 0.5rem !important;
+  border-start-start-radius: 0.5rem !important;
+  padding-bottom: 0.35rem !important;
+  padding-top: 0.35rem !important;
+  padding-inline-end: 0.65rem !important;
+  padding-inline-start: 0.65rem !important;
 }
 
 .giscus :global(.gsc-comment .gsc-comment-box-tabs) {
@@ -130,4 +137,25 @@
 
 .giscus :global(.gsc-social-reaction-summary-item.has-reacted) {
   color: var(--giscus-primary);
+}
+
+.giscus :global(.gsc-replies) {
+  background: none;
+  padding-top: 0;
+}
+
+.giscus :global(.pagination-loader-container) {
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
+}
+
+.giscus :global(.gsc-loading-image) {
+  background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
+}
+
+:global(.dark) .giscus :global(.pagination-loader-container) {
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
+}
+
+:global(.dark) .giscus :global(.gsc-loading-image) {
+  background-image: url("https://github.githubassets.com/images/mona-loading-dimmed.gif");
 }
