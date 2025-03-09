@@ -8,6 +8,7 @@
   --giscus-bg-secondary: transparent;
   --giscus-bg-hover: rgb(229 231 235 / 20%);
   --giscus-radius: 0.75rem;
+  --giscus-gap: 1rem;
 }
 
 :global(.dark) .giscus {
@@ -17,10 +18,12 @@
   --giscus-bg: transparent;
   --giscus-bg-secondary: transparent;
   --giscus-bg-hover: rgb(75 85 99 / 20%);
+  --giscus-gap: 1rem;
 }
 
 .giscus :global(.gsc-main) {
   margin-top: 1.5rem;
+  gap: var(--giscus-gap);
 }
 
 .giscus :global(.gsc-header) {
@@ -36,15 +39,21 @@
   border-radius: var(--giscus-radius);
   border-color: var(--giscus-border);
   background-color: var(--giscus-bg);
+  border-width: 1px;
 }
 
 .giscus :global(.gsc-comment) {
   border-radius: var(--giscus-radius);
   border-color: var(--giscus-border);
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .giscus :global(.gsc-comment-header) {
-  padding: 1rem;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
   background-color: var(--giscus-bg-secondary);
   border-top-left-radius: var(--giscus-radius);
   border-top-right-radius: var(--giscus-radius);
@@ -52,6 +61,36 @@
 
 .giscus :global(.gsc-comment-content) {
   padding: 1rem;
+}
+
+.giscus :global(.gsc-timeline) {
+  gap: 0.5rem;
+}
+
+.giscus :global(.gsc-timeline > * + *) {
+  border-top: 1px solid var(--giscus-border);
+  padding-top: 0.5rem;
+}
+
+.giscus :global(.gsc-reply-box) {
+  background: none;
+  border: none;
+}
+
+.giscus :global(.gsc-comment-box-tabs) {
+  border-start-end-radius: var(--giscus-radius);
+  border-start-start-radius: var(--giscus-radius);
+}
+
+.giscus :global(.gsc-comment-box-tabs button) {
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-start-end-radius: 0.5rem;
+  border-start-start-radius: 0.5rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.giscus :global(.gsc-comment .gsc-comment-box-tabs) {
+  border-radius: var(--giscus-radius) var(--giscus-radius) 0 0;
 }
 
 .giscus :global(.gsc-comment-reactions) {
