@@ -7,7 +7,7 @@
   --giscus-bg: theme(colors.white);
   --giscus-bg-secondary: theme(colors.gray.100);
   --giscus-bg-hover: theme(colors.gray.200);
-  --giscus-radius: 0.25rem;
+  --giscus-radius: 0.75rem;
 }
 
 :global(.dark) .giscus {
@@ -20,7 +20,7 @@
 }
 
 .giscus :global(.gsc-main) {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .giscus :global(.gsc-header) {
@@ -29,7 +29,7 @@
 }
 
 .giscus :global(.gsc-comments) {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .giscus :global(.gsc-comment-box) {
@@ -44,7 +44,7 @@
 }
 
 .giscus :global(.gsc-comment-header) {
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   background-color: var(--giscus-bg-secondary);
   border-top-left-radius: var(--giscus-radius);
   border-top-right-radius: var(--giscus-radius);
@@ -55,34 +55,38 @@
 }
 
 .giscus :global(.gsc-comment-reactions) {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--giscus-border);
 }
 
 .giscus :global(.gsc-reactions-button) {
-  padding: 0.25rem 0.5rem;
+  padding: 0.375rem 0.75rem;
   border-radius: var(--giscus-radius);
   color: var(--giscus-text-secondary);
   background-color: var(--giscus-bg-secondary);
+  transition: all 0.2s ease;
 }
 
 .giscus :global(.gsc-reactions-button:hover) {
   background-color: var(--giscus-bg-hover);
+  color: var(--giscus-primary);
 }
 
 .giscus :global(.gsc-github-link) {
   color: var(--giscus-text-secondary);
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .giscus :global(.gsc-github-link:hover) {
   color: var(--giscus-primary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .giscus :global(.gsc-social-reaction-summary-item) {
   color: var(--giscus-text-secondary);
+  transition: all 0.2s ease;
 }
 
 .giscus :global(.gsc-social-reaction-summary-item.has-reacted) {
