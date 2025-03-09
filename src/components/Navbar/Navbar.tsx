@@ -211,23 +211,26 @@ const Navbar = forwardRef<HTMLElement, NavbarProps>(({
 }, ref) => {
   
   const { direction, isTop } = useWindowScrollInfo();
+  // 确保在向下滚动时隐藏顶栏，向上滚动时显示顶栏
   const shouldHide = position !== 'static' && hideOnScroll && direction.vertical === 'down';
+  // 如果show属性被明确设置，则使用该值；否则根据滚动方向决定是否显示
   const isShow = show ?? !shouldHide;
   const [states, dispatch] = useReducer(collapseReducer, initialStates);
   const shouldTransparent = transparentOnTop && isTop && states.open === false;
   // no render when onShowChange changed
   const handleShowChange = useCallbackRef(onShowChange);
   useEffect(() => {
-    handleShowChange && handleShowChange(!shouldHide);
-  }, [shouldHide]);
+    handleShowChange && handleShowChange(isShow);
+  }, [isShow]);
 
   const [translateSpring] = useSpring(() => ({
     to: {
       transform: isShow ? 'translateY(0%)' : 'translateY(-100%)',
     },
     config: {
-      tension: 300,
-      friction: 30,
+      tension: 280,
+      friction: 26,
+      clamp: true, // 防止过冲，使动画更加精确
     }
   }), [isShow]);
 

@@ -1,0 +1,90 @@
+.giscus {
+  --giscus-primary: theme(colors.primary.500);
+  --giscus-primary-hover: theme(colors.primary.400);
+  --giscus-text: theme(colors.gray.700);
+  --giscus-text-secondary: theme(colors.gray.500);
+  --giscus-border: theme(colors.gray.200);
+  --giscus-bg: theme(colors.white);
+  --giscus-bg-secondary: theme(colors.gray.100);
+  --giscus-bg-hover: theme(colors.gray.200);
+  --giscus-radius: 0.25rem;
+}
+
+:global(.dark) .giscus {
+  --giscus-text: theme(colors.gray.300);
+  --giscus-text-secondary: theme(colors.gray.400);
+  --giscus-border: theme(colors.gray.700);
+  --giscus-bg: theme(colors.gray.800);
+  --giscus-bg-secondary: theme(colors.gray.700);
+  --giscus-bg-hover: theme(colors.gray.600);
+}
+
+.giscus :global(.gsc-main) {
+  margin-top: 1rem;
+}
+
+.giscus :global(.gsc-header) {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--giscus-border);
+}
+
+.giscus :global(.gsc-comments) {
+  margin-top: 1rem;
+}
+
+.giscus :global(.gsc-comment-box) {
+  border-radius: var(--giscus-radius);
+  border-color: var(--giscus-border);
+  background-color: var(--giscus-bg);
+}
+
+.giscus :global(.gsc-comment) {
+  border-radius: var(--giscus-radius);
+  border-color: var(--giscus-border);
+}
+
+.giscus :global(.gsc-comment-header) {
+  padding: 0.75rem 1rem;
+  background-color: var(--giscus-bg-secondary);
+  border-top-left-radius: var(--giscus-radius);
+  border-top-right-radius: var(--giscus-radius);
+}
+
+.giscus :global(.gsc-comment-content) {
+  padding: 1rem;
+}
+
+.giscus :global(.gsc-comment-reactions) {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--giscus-border);
+}
+
+.giscus :global(.gsc-reactions-button) {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--giscus-radius);
+  color: var(--giscus-text-secondary);
+  background-color: var(--giscus-bg-secondary);
+}
+
+.giscus :global(.gsc-reactions-button:hover) {
+  background-color: var(--giscus-bg-hover);
+}
+
+.giscus :global(.gsc-github-link) {
+  color: var(--giscus-text-secondary);
+  text-decoration: none;
+}
+
+.giscus :global(.gsc-github-link:hover) {
+  color: var(--giscus-primary);
+  text-decoration: underline;
+}
+
+.giscus :global(.gsc-social-reaction-summary-item) {
+  color: var(--giscus-text-secondary);
+}
+
+.giscus :global(.gsc-social-reaction-summary-item.has-reacted) {
+  color: var(--giscus-primary);
+}

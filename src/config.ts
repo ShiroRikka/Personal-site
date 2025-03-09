@@ -141,7 +141,20 @@ const config: Config = {
       infoText: '转载或引用本文时请注明作者及出处，不得用于商业用途。',
     }
   },
-  comment: false,
+  comment: {
+    provider: 'giscus',
+    options: {
+      repo: 'ShiroRikka/ShiroRikka.github.io',
+      repoId: 'R_kgDOLBWqpw',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOLBWqp84CcQXE',
+      mapping: 'pathname',
+      reactionsEnabled: '1',
+      emitMetadata: '0',
+      inputPosition: 'top',
+      lang: 'zh-CN'
+    }
+  },
   footer: {
     links: [
       { label: '更新日志', url: url('changelog')},
