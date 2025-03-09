@@ -149,8 +149,8 @@ const config: Config = {
       category: 'Announcements',
       categoryId: 'DIC_kwDOLBWqp84CcQXE',
       mapping: 'pathname',
-      reactionsEnabled: true,
-      emitMetadata: false,
+      reactionsEnabled: '1',
+      emitMetadata: '0',
       inputPosition: 'top',
       lang: 'zh-CN'
     }
